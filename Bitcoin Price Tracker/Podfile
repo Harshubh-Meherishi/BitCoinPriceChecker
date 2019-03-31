@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Bitcoin Price Tracker' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'SwiftChart'
+  pod 'EFCountingLabel', '~> 4.0'
+
+
+  # Pods for Bitcoin Price Tracker
+
+  target 'Bitcoin Price TrackerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Bitcoin Price TrackerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

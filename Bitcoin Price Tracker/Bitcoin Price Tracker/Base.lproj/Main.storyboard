@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bitcoin_Price_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" misplaced="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoI-H1-qXO">
+                                <rect key="frame" x="128" y="597" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.23585417866706848" green="0.51494830846786499" blue="0.91833573579788208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Get Current Price">
+                                    <color key="titleColor" red="0.01983429491519928" green="0.0093010552227497101" blue="0.021683704107999802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URo-lS-fbH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3M-Xh-nla">
+                                <rect key="frame" x="117" y="482" width="142" height="55"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrO-wu-HGy" customClass="Chart" customModule="SwiftChart">
+                                <rect key="frame" x="0.0" y="120" width="375" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Imi-oV-pg7">
+                                <rect key="frame" x="145" y="45" width="85" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="QBc-qg-vGj"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="USD"/>
+                                    <segment title="INR"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Imi-oV-pg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2JW-Rs-XbH"/>
+                            <constraint firstItem="Imi-oV-pg7" firstAttribute="centerX" secondItem="jrO-wu-HGy" secondAttribute="centerX" id="Egd-Qr-WTO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KoI-H1-qXO" secondAttribute="bottom" constant="40" id="GPC-jL-wgh"/>
+                            <constraint firstItem="Imi-oV-pg7" firstAttribute="centerX" secondItem="KoI-H1-qXO" secondAttribute="centerX" id="Wbu-O8-8zV"/>
+                            <constraint firstItem="KoI-H1-qXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="XBz-Uk-mLO"/>
+                            <constraint firstItem="jrO-wu-HGy" firstAttribute="top" secondItem="Imi-oV-pg7" secondAttribute="bottom" constant="50" id="YBX-oQ-f3i"/>
+                            <constraint firstItem="Imi-oV-pg7" firstAttribute="centerX" secondItem="Y3M-Xh-nla" secondAttribute="centerX" id="aK7-cC-Gqo"/>
+                            <constraint firstAttribute="bottom" secondItem="jrO-wu-HGy" secondAttribute="bottom" constant="332" id="b1K-cO-bKJ"/>
+                            <constraint firstItem="KoI-H1-qXO" firstAttribute="top" secondItem="Y3M-Xh-nla" secondAttribute="bottom" constant="60" id="ian-oK-WlG"/>
+                            <constraint firstItem="jrO-wu-HGy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kPM-Es-oOS"/>
+                            <constraint firstItem="Imi-oV-pg7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="sjv-bI-eE0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Chart" destination="jrO-wu-HGy" id="Ke2-Hc-wnh"/>
+                        <outlet property="MySeg" destination="Imi-oV-pg7" id="3Il-e2-Rar"/>
+                        <outlet property="rateLabel" destination="Y3M-Xh-nla" id="zBY-Af-NRe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+</document>

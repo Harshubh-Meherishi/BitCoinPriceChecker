@@ -1,0 +1,6 @@
+framework module Pods_Bitcoin_Price_TrackerUITests {
+  umbrella header "Pods-Bitcoin Price TrackerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
